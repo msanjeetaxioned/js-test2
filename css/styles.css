@@ -128,9 +128,18 @@ textarea {
   padding: 15px;
   border: 2px solid #d3d8d9;
   border-radius: 3px;
+  margin-bottom: 10px;
   display: inline-block;
   color: #222;
   font-size: 20px;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 20px;
+}
+.error-message.display-none {
+  display: none;
 }
 
 .days__list {

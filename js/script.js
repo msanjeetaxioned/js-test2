@@ -11,19 +11,37 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     const yearInput = form["year-input"];
 
-    let days= [[],[],[],[],[],[],[]];
+    let days = [[],[],[],[],[],[],[]];
 
     let minYear = 1958;
     let year = 0;
+
+    const errorMessageSpan = form.querySelector(".input-container > .error-message");
+    const errorMessages = ["*Enter Year!", "*Year should be a Positive number", "*Min. allowed year is: " + minYear];
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         let yearInputValue = parseInt(yearInput.value);
         if(yearInputValue != "" && yearInputValue != null) {
-            if(yearInputValue >= minYear) {
-                year = yearInputValue;
-                updateDays();
+            if(yearInputValue > 0) {
+                if(yearInputValue >= minYear) {
+                    year = yearInputValue;
+                    errorMessageSpan.classList.add("display-none");
+                    updateDays();
+                }
+                else {
+                    errorMessageSpan.classList.remove("display-none");
+                    errorMessageSpan.innerText = errorMessages[2];
+                }
             }
+            else {
+                errorMessageSpan.classList.remove("display-none");
+                errorMessageSpan.innerText = errorMessages[1];
+            }
+        }
+        else {
+            errorMessageSpan.classList.remove("display-none");
+            errorMessageSpan.innerText = errorMessages[0];
         }
     });
 
@@ -40,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     console.log(data);
 
     function updateDays() {
-        days= [[],[],[],[],[],[],[]];
+        days = [[],[],[],[],[],[],[]];
         for(let i = 0; i < data.length; i++) {
             if(data[i].year <= year) {
                 let nameInitials = data[i].name.split(" ")[0].charAt(0) + data[i].name.split(" ")[1].charAt(0);
@@ -48,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
                     case 0: days[6].push(nameInitials);
                             break;
                     case 1: days[0].push(nameInitials);
-                             break;
+                            break;
                     case 2: days[1].push(nameInitials);
-                             break;
+                            break;
                     case 3: days[2].push(nameInitials);
                             break;
                     case 4: days[3].push(nameInitials);
