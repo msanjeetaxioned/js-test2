@@ -160,45 +160,42 @@ textarea {
   border: 2px solid #d3d8d9;
   border-top: none;
   display: flex;
+  background: #fff;
   flex-direction: row;
   flex-wrap: wrap;
-  background: #fff;
+  align-content: flex-start;
 }
 .birthdays__list.day--empty {
   background: none;
   background: #eaf0f2;
 }
-.birthdays__list.one {
+.birthdays__list.one > li {
   flex: 1;
   height: 100%;
 }
-.birthdays__list.two {
-  flex-basis: 50%;
-  height: 100%;
-}
-.birthdays__list.four {
+.birthdays__list.four > li {
   flex-basis: 50%;
   height: 50%;
 }
-.birthdays__list.nine {
-  flex-basis: "33.3333333333%";
-  height: "33.3333333333%";
+.birthdays__list.nine > li {
+  flex-basis: 33.3333333333%;
+  height: 33.3333333333%;
 }
-.birthdays__list.sixteen {
+.birthdays__list.sixteen > li {
   flex-basis: 25%;
   height: 25%;
 }
-.birthdays__list.twenty-five {
+.birthdays__list.twenty-five > li {
   flex-basis: 20%;
   height: 20%;
 }
-.birthdays__list.thirty-six {
-  flex-basis: "16.6666666667%";
-  height: "16.6666666667%";
+.birthdays__list.thirty-six > li {
+  flex-basis: 16.6666666667%;
+  height: 16.6666666667%;
 }
-.birthdays__list.forty-nine {
-  flex-basis: "14.2857142857%";
-  height: "14.2857142857%";
+.birthdays__list.forty-nine > li {
+  flex-basis: 14.2857142857%;
+  height: 14.2857142857%;
 }
 .birthdays__list__item {
   display: flex;
