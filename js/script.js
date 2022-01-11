@@ -32,16 +32,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 else {
                     errorMessageSpan.classList.remove("display-none");
                     errorMessageSpan.innerText = errorMessages[2];
+                    updateDays(true);
                 }
             }
             else {
                 errorMessageSpan.classList.remove("display-none");
                 errorMessageSpan.innerText = errorMessages[1];
+                updateDays(true);
             }
         }
         else {
             errorMessageSpan.classList.remove("display-none");
             errorMessageSpan.innerText = errorMessages[0];
+            updateDays(true);
         }
     });
 
@@ -57,31 +60,49 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
     console.log(data);
 
-    function updateDays() {
+    function resetDays() {
         days = [[],[],[],[],[],[],[]];
-        for(let i = 0; i < data.length; i++) {
-            if(data[i].year <= year) {
-                let nameInitials = data[i].name.split(" ")[0].charAt(0) + data[i].name.split(" ")[1].charAt(0);
-                switch(getDay(data[i].date, data[i].month)) {
-                    case 0: days[6].push(nameInitials);
-                            break;
-                    case 1: days[0].push(nameInitials);
-                            break;
-                    case 2: days[1].push(nameInitials);
-                            break;
-                    case 3: days[2].push(nameInitials);
-                            break;
-                    case 4: days[3].push(nameInitials);
-                            break;
-                    case 5: days[4].push(nameInitials);
-                            break;
-                    case 6: days[5].push(nameInitials);
-                            break;
+        for(let i = 0; i < days.length; i++) {
+            resetBirthdaysList(i);
+            let ul = document.createElement("ul");
+            ul.classList.add("birthdays__list");
+            daysLis[i].append(ul);
+        }
+    }
+
+    function resetBirthdaysList(i) {
+        let list = daysLis[i].querySelector(".birthdays__list");
+        if(list) {
+            list.parentNode.removeChild(list);
+        }
+    }
+
+    function updateDays(onlyReset = false) {
+        resetDays();
+        if(!onlyReset) {
+            for(let i = 0; i < data.length; i++) {
+                if(data[i].year <= year) {
+                    let nameInitials = data[i].name.split(" ")[0].charAt(0) + data[i].name.split(" ")[1].charAt(0);
+                    switch(getDay(data[i].date, data[i].month)) {
+                        case 0: days[6].push(nameInitials);
+                                break;
+                        case 1: days[0].push(nameInitials);
+                                break;
+                        case 2: days[1].push(nameInitials);
+                                break;
+                        case 3: days[2].push(nameInitials);
+                                break;
+                        case 4: days[3].push(nameInitials);
+                                break;
+                        case 5: days[4].push(nameInitials);
+                                break;
+                        case 6: days[5].push(nameInitials);
+                                break;
+                    }
                 }
             }
+            updateBirthdaysHTML();
         }
-        console.log(days);
-        updateBirthdaysHTML();
     }
 
     function getDay(dateNum, month) {
@@ -92,10 +113,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     function updateBirthdaysHTML() {
         for(let i = 0; i < days.length; i++) {
-            let list = daysLis[i].querySelector(".birthdays__list");
-            if(list) {
-                list.parentNode.removeChild(list);
-            }
+            resetBirthdaysList(i);
             let ul = document.createElement("ul");
             ul.classList.add("birthdays__list");
             daysLis[i].append(ul);
