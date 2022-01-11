@@ -134,10 +134,11 @@ textarea {
 }
 
 .days__list {
+  margin-bottom: 50px;
   display: flex;
 }
 .days__list__item {
-  margin-right: 2.5%;
+  margin-right: 1%;
   flex: 1;
 }
 .days__list__item:last-child {
@@ -145,8 +146,8 @@ textarea {
 }
 .days__list__item > h2 {
   padding: 15px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background: #ab9eee;
   color: #fff;
   font-size: 16px;
@@ -156,6 +157,8 @@ textarea {
 
 .birthdays__list {
   height: 200px;
+  border: 2px solid #d3d8d9;
+  border-top: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
