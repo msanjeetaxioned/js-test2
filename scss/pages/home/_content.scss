@@ -1,0 +1,54 @@
+h1 { @extend %main-heading; }
+
+form { display: flex; }
+
+textarea {
+    padding: 15px;
+    border: 2px solid $border-color;
+    border-radius: 3px;
+    margin-right: 5%;
+    display: block; 
+    flex: 60%;
+    resize: vertical;
+}
+
+.input-and-submit-container { 
+    flex: 35%;
+    button {
+        padding: 15px 50px;
+        border: none;
+        border-radius: 3px;
+        display: inline-block;
+        background: $update-button-color;
+        color: $white-color;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background 1s ease-in-out, color 1s ease-in-out;
+        &:hover {
+            background: $border-color;
+            color: $update-button-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.input-container {
+    margin-bottom: 35px;
+    > * { display: block; }
+    > label {
+        margin-bottom: 10px;
+        color: $heading-font-color;
+        font-size: 22px;
+        text-transform: capitalize;
+    }
+    > input {
+        width: 70%;
+        padding: 15px;
+        border: 2px solid $border-color;
+        border-radius: 3px;
+        display: inline-block;
+        color: $font-color;
+        font-size: 20px;
+    }
+}

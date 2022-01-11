@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+
+body {
+    background: $background;
+    font-family: $fontFamily; 
+}
+
+.wrapper {
+    max-width: 1728px;
+    width: 90%;
+    padding: 60px 0;
+    margin: 0 auto;
+}
+
+%main-heading {
+    margin-bottom: 60px;
+    color: $heading-font-color;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: capitalize;
+}

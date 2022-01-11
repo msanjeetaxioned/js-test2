@@ -1,0 +1,136 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eaf0f2;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 1728px;
+  width: 90%;
+  padding: 60px 0;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 60px;
+  color: #5e6d7a;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+form {
+  display: flex;
+}
+
+textarea {
+  padding: 15px;
+  border: 2px solid #d3d8d9;
+  border-radius: 3px;
+  margin-right: 5%;
+  display: block;
+  flex: 60%;
+  resize: vertical;
+}
+
+.input-and-submit-container {
+  flex: 35%;
+}
+.input-and-submit-container button {
+  padding: 15px 50px;
+  border: none;
+  border-radius: 3px;
+  display: inline-block;
+  background: #0186ef;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 1s ease-in-out, color 1s ease-in-out;
+}
+.input-and-submit-container button:hover {
+  background: #d3d8d9;
+  color: #0186ef;
+  cursor: pointer;
+}
+
+.input-container {
+  margin-bottom: 35px;
+}
+.input-container > * {
+  display: block;
+}
+.input-container > label {
+  margin-bottom: 10px;
+  color: #5e6d7a;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+.input-container > input {
+  width: 70%;
+  padding: 15px;
+  border: 2px solid #d3d8d9;
+  border-radius: 3px;
+  display: inline-block;
+  color: #222;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,10 @@
+// Returns given Object key's value.
+///
+/// @param {string} $mapName
+///   The Object Name.
+/// @param {string} $keyName
+///   The 'key' of the Object.
+/// @return {string} 'value' of the 'key' of the 'Object'.
+@function returnMap($mapName, $keyName) {
+    @return map-get($map: $mapName, $key: $keyName);
+}
