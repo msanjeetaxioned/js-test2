@@ -1,0 +1,80 @@
+.days__list {
+    display: flex;
+    &__item {        
+        margin-right: 2.5%;
+        flex: 1;
+        &:last-child { margin-right: 0; }
+        > h2 {
+            padding: 15px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background: $gray-back-color;
+            color: $white-color;
+            font-size: 16px;
+            text-align: right;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.birthdays__list {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: $white-color;
+    &.day--empty {
+        background: none;
+        background: $background;
+    }
+    &.one {
+        flex: 1;
+        height: 100%;
+    }
+    &.two {
+        flex-basis: 50%;
+        height: 100%;
+    }
+    &.four {
+        flex-basis: 50%;
+        height: 50%;
+    }
+    &.nine {
+        flex-basis: calc(1/3*100) + "%";
+        height: calc(1/3*100) + "%";
+    }
+    &.sixteen {
+        flex-basis: 25%;
+        height: 25%;
+    }
+    &.twenty-five {
+        flex-basis: 20%;
+        height: 20%;
+    }
+    &.thirty-six {
+        flex-basis: calc(1/6*100) + "%";
+        height: calc(1/6*100) + "%";
+    }
+    &.forty-nine {
+        flex-basis: calc(1/7*100) + "%";
+        height: calc(1/7*100) + "%";
+    }
+    &__item {
+        display: flex;
+        color: $white-color;
+        font-size: 16px;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        &:first-child { background: returnMap($birthday, color1); }
+        &:nth-child(2) { background: returnMap($birthday, color2); }
+        &:nth-child(3) { background: returnMap($birthday, color3); }
+        &:nth-child(4) { background: returnMap($birthday, color4); }
+        &:nth-child(5) { background: returnMap($birthday, color5); }
+        &:nth-child(6) { background: returnMap($birthday, color6); }
+        &:nth-child(7) { background: returnMap($birthday, color7); }
+        &:nth-child(8) { background: returnMap($birthday, color8); }
+        &:nth-child(9) { background: returnMap($birthday, color9); }
+    }
+}

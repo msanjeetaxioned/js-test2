@@ -133,4 +133,105 @@ textarea {
   font-size: 20px;
 }
 
+.days__list {
+  display: flex;
+}
+.days__list__item {
+  margin-right: 2.5%;
+  flex: 1;
+}
+.days__list__item:last-child {
+  margin-right: 0;
+}
+.days__list__item > h2 {
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #ab9eee;
+  color: #fff;
+  font-size: 16px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.birthdays__list {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.birthdays__list.day--empty {
+  background: none;
+  background: #eaf0f2;
+}
+.birthdays__list.one {
+  flex: 1;
+  height: 100%;
+}
+.birthdays__list.two {
+  flex-basis: 50%;
+  height: 100%;
+}
+.birthdays__list.four {
+  flex-basis: 50%;
+  height: 50%;
+}
+.birthdays__list.nine {
+  flex-basis: "33.3333333333%";
+  height: "33.3333333333%";
+}
+.birthdays__list.sixteen {
+  flex-basis: 25%;
+  height: 25%;
+}
+.birthdays__list.twenty-five {
+  flex-basis: 20%;
+  height: 20%;
+}
+.birthdays__list.thirty-six {
+  flex-basis: "16.6666666667%";
+  height: "16.6666666667%";
+}
+.birthdays__list.forty-nine {
+  flex-basis: "14.2857142857%";
+  height: "14.2857142857%";
+}
+.birthdays__list__item {
+  display: flex;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.birthdays__list__item:first-child {
+  background: #555d7b;
+}
+.birthdays__list__item:nth-child(2) {
+  background: #9fd400;
+}
+.birthdays__list__item:nth-child(3) {
+  background: #c97d99;
+}
+.birthdays__list__item:nth-child(4) {
+  background: #79cae5;
+}
+.birthdays__list__item:nth-child(5) {
+  background: #e8492a;
+}
+.birthdays__list__item:nth-child(6) {
+  background: #0055d0;
+}
+.birthdays__list__item:nth-child(7) {
+  background: #ff1baa;
+}
+.birthdays__list__item:nth-child(8) {
+  background: #0dccfe;
+}
+.birthdays__list__item:nth-child(9) {
+  background: #d9e710;
+}
+
 /*# sourceMappingURL=styles.css.map */
