@@ -75,7 +75,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     function updateBirthdaysHTML() {
         for(let i = 0; i < days.length; i++) {
             let list = daysLis[i].querySelector(".birthdays__list");
-            list.parentNode.removeChild(list);
+            if(list) {
+                list.parentNode.removeChild(list);
+            }
             let ul = document.createElement("ul");
             ul.classList.add("birthdays__list");
             daysLis[i].append(ul);
@@ -119,5 +121,4 @@ document.addEventListener('DOMContentLoaded', function(event) {
             return 'forty-nine';
         }
     }
-
 });
